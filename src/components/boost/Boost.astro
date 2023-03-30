@@ -1,4 +1,6 @@
 ---
+import Container from '@components/Container.astro';
+
 const BOOST_DATA = [
   'Gestión para uso de discapacitados',
   'Modelado y visualización de proyectos',
@@ -6,58 +8,60 @@ const BOOST_DATA = [
 ];
 ---
 
-<section class='pt-16 lg:pt-20 xl:pt-28 max-w-5xl mx-auto px-4 bg-white'>
-  <div class='flex flex-wrap flex-col lg:flex-row-reverse'>
-    <div class='flex flex-grow-0 flex-shrink-0 basis-full lg:basis-7/12'>
-      <div class='w-full text-left 2xl:pt-24 2xl:pl-14'>
-        <div class='text-center lg:text-left'>
-          <h3 class='text-black text-xl xl:text-4xl 2xl:text-3xl leading-relaxed lg:leading-6 font-bold'>
-            Diseño Arquitectónico
-          </h3>
-          <p
-            class='text-base lg:text-lg text-secondary opacity-60 leading-6 lg:leading-relaxed 2xl:leading-loose py-0 px-5 lg:px-0 mt-4'
-          >
-            Interacción con el cliente para sus necesidades
-          </p>
+<section class='pt-16 lg:pt-20 xl:pt-28 bg-white'>
+  <Container>
+    <div class='flex flex-wrap flex-col lg:flex-row-reverse'>
+      <div class='flex flex-grow-0 flex-shrink-0 basis-full lg:basis-7/12'>
+        <div class='w-full text-left 2xl:pt-24 lg:pl-14'>
+          <div class='text-center lg:text-left'>
+            <h3 class='text-black text-xl xl:text-4xl 2xl:text-3xl leading-relaxed lg:leading-6 font-bold'>
+              Diseño Arquitectónico
+            </h3>
+            <p
+              class='text-base lg:text-lg text-secondary opacity-60 leading-6 lg:leading-relaxed 2xl:leading-loose py-0 px-5 lg:px-0 mt-4'
+            >
+              Interacción con el cliente para sus necesidades
+            </p>
+          </div>
+          <ul class='m-0 p-0 ml-6 lg:ml-0 mb-2.5 mt-7'>
+            {
+              // <i class='text-[#DADADA] w-4 h-4 lg:w-6 lg:h-6 mr-2.5' />
+              BOOST_DATA.map((b, i) => (
+                <li class='flex items-center justify-start text-base lg:text-lg text-secondary leading-loose'>
+                  <svg
+                    class='text-black w-4 h-4 lg:w-6 lg:h-6 mr-2.5'
+                    width='24'
+                    height='24'
+                    viewBox='0 0 24 24'
+                    fill='none'
+                    xmlns='http://www.w3.org/2000/svg'>
+                    <>
+                      <path fill='#fff' d='M0 0h24v24H0z' />
+                      <path
+                        fill-rule='evenodd'
+                        clip-rule='evenodd'
+                        d='M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm13.707-2.707a1 1 0 0 1 0 1.414l-3.683 3.683a1.449 1.449 0 0 1-2.048 0l-1.683-1.683a1 1 0 1 1 1.414-1.414L11 12.586l3.293-3.293a1 1 0 0 1 1.414 0Z'
+                        fill='#222'
+                      />
+                    </>
+                  </svg>
+                  {b}
+                </li>
+              ))
+            }
+          </ul>
         </div>
-        <ul class='m-0 p-0 ml-6 lg:ml-0 mb-2.5 mt-7'>
-          {
-            // <i class='text-[#DADADA] w-4 h-4 lg:w-6 lg:h-6 mr-2.5' />
-            BOOST_DATA.map((b, i) => (
-              <li class='flex items-center justify-start text-base lg:text-lg text-secondary leading-loose'>
-                <svg
-                  class='text-black w-4 h-4 lg:w-6 lg:h-6 mr-2.5'
-                  width='24'
-                  height='24'
-                  viewBox='0 0 24 24'
-                  fill='none'
-                  xmlns='http://www.w3.org/2000/svg'>
-                  <>
-                    <path fill='#fff' d='M0 0h24v24H0z' />
-                    <path
-                      fill-rule='evenodd'
-                      clip-rule='evenodd'
-                      d='M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm13.707-2.707a1 1 0 0 1 0 1.414l-3.683 3.683a1.449 1.449 0 0 1-2.048 0l-1.683-1.683a1 1 0 1 1 1.414-1.414L11 12.586l3.293-3.293a1 1 0 0 1 1.414 0Z'
-                      fill='#222'
-                    />
-                  </>
-                </svg>
-                {b}
-              </li>
-            ))
-          }
-        </ul>
+      </div>
+      <div class='flex flex-grow-0 flex-shrink-0 basis-full lg:basis-5/12'>
+        <img
+          class='flex relative top-0 max-w-full mix-blend-darken md:-top-10'
+          width={633}
+          height={707}
+          src='/images/two_men.jpg'
+          alt='person in cohete'
+          loading='lazy'
+        />
       </div>
     </div>
-    <div class='flex flex-grow-0 flex-shrink-0 basis-full lg:basis-5/12'>
-      <img
-        class='flex relative top-0 max-w-full mix-blend-darken md:-top-10'
-        width={633}
-        height={707}
-        src='/images/two_men.jpg'
-        alt='person in cohete'
-        loading='lazy'
-      />
-    </div>
-  </div>
+  </Container>
 </section>

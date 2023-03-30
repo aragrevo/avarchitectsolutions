@@ -1,7 +1,6 @@
 ---
-// import ButtonCTA from './ButtonCTA.astro';
-import Container from './Container.astro';
-// import DarkMode from './icons/DarkMode.astro';
+import Container from '@components/Container.astro';
+import TopBar from './TopBar.astro';
 
 const menu = [
   {
@@ -19,9 +18,10 @@ const menu = [
 ];
 ---
 
-<header class='bg-white dark:bg-neutral-800 transition-colors duration-1000'>
+<header class='bg-white sticky top-0 transition-colors duration-1000 z-10 py-2'>
   <Container>
-    <nav class='flex justify-between items-center'>
+    <TopBar />
+    <nav class='flex flex-col sm:flex-row justify-between items-center'>
       <a href='/' class='dark:text-slate-300'>
         <img
           class='w-10 h-10 aspect-square'
@@ -32,7 +32,7 @@ const menu = [
           loading='lazy'
         />
       </a>
-      <ul class='lg:flex gap-8 hidden'>
+      <ul class='flex pt-2 sm:pt-0 gap-4 lg:gap-8'>
         {
           menu.map(({name, href}) => (
             <li>

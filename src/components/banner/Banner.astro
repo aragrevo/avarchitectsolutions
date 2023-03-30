@@ -1,22 +1,28 @@
+---
+import Container from '@components/Container.astro';
+---
+
 <section id='banner' class='bg-[#F6F8FB] overflow-hidden w-full pt-28 pb-12 md:pt-52 md:pb-16'>
-  <div class='grid grid-cols-1 gap-0 px-4 max-w-5xl mx-auto md:grid-cols-2'>
-    <div>
-      <h1 class='font-bold leading-snug text-3xl mb-4 md:mb-5 md:text-5xl md:max-w-lg text-black'>
-        Andrés Vasquez Architect Solutions
-      </h1>
-      <p class='text-base text-text_secondary mb-5 md:max-w-md md:text-xl md:mb-8'>
-        Un mundo de soluciones prácticas y rápidas
-      </p>
+  <Container>
+    <div class='grid grid-cols-1 gap-0 md:grid-cols-2'>
+      <div>
+        <h1 class='font-bold leading-snug text-3xl mb-4 md:mb-5 md:text-5xl md:max-w-lg text-black'>
+          Andrés Vasquez Architect Solutions
+        </h1>
+        <p class='text-base text-text_secondary mb-5 md:max-w-md md:text-xl md:mb-8'>
+          Un mundo de soluciones prácticas y rápidas
+        </p>
+      </div>
+      <div>
+        <img
+          class='flex relative top-0 max-w-full md:-top-10 mix-blend-multiply'
+          width={958}
+          height={765}
+          src='/images/two_men.jpg'
+          alt='two men see builds'
+        />
+        <!-- priority='high' -->
+      </div>
     </div>
-    <div>
-      <img
-        class='flex relative top-0 max-w-full mix-blend-darken md:-top-10 mix-blend-multiply'
-        width={958}
-        height={765}
-        src='/images/two_men.jpg'
-        alt='two men see builds'
-      />
-      <!-- priority='high' -->
-    </div>
-  </div>
+  </Container>
 </section>

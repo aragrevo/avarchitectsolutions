@@ -1,0 +1,29 @@
+---
+import ButtonShare from '@icons/ButtonShare.astro';
+import {socialNetworks} from '@db/data.js';
+import Instagram from '@icons/Instagram.astro';
+import Facebook from '@icons/Facebook.astro';
+import Email from '@icons/Email.astro';
+---
+
+<ul class='flex justify-end gap-4 pb-2'>
+  {
+    socialNetworks.map(({name, href}) => (
+      <>
+        <li>
+          <a
+            href={href}
+            title={name}
+            target='_blank'
+            rel='noopener noreferrer'
+            class={`block transition  hover:scale-110 text-41444B hover:text-OO1ED3`}>
+            {name === 'Instagram' && <Instagram />}
+            {name === 'Facebook' && <Facebook />}
+            {name === 'Email' && <Email />}
+          </a>
+        </li>
+      </>
+    ))
+  }
+  <ButtonShare />
+</ul>
