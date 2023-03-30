@@ -1,0 +1,13 @@
+---
+const {title, className, text, icon} = Astro.props;
+---
+
+<article class={`${className} text-center group`}>
+  <picture
+    class='flex mx-auto w-20 h-20 lg:w-28 lg:h-28 justify-center items-center rounded-[20px] lg:rounded-[40px] bg-gradient-to-tl from-amber-500 to-amber-200 group-[:nth-of-type(3)_&]:bg-black'
+  >
+    <lord-icon class='w-full h-full' src={`https://cdn.lordicon.com/${icon}.json`} trigger='hover'></lord-icon>
+  </picture>
+  <h3 class='m-0 text-lg lg:text-base leading-none font-bold text-black mt-7 mb-5'>{title}</h3>
+  <p class='m-0 text-[15px] text-heading_secondary leading-loose'>{text}</p>
+</article>

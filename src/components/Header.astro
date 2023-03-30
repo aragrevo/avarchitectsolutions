@@ -1,0 +1,51 @@
+---
+// import ButtonCTA from './ButtonCTA.astro';
+import Container from './Container.astro';
+// import DarkMode from './icons/DarkMode.astro';
+
+const menu = [
+  {
+    name: 'Inicio',
+    href: '/',
+  },
+  {
+    name: 'Servicios',
+    href: '/#services',
+  },
+  {
+    name: 'Galería',
+    href: '/#gallery',
+  },
+];
+---
+
+<header class='bg-white dark:bg-neutral-800 transition-colors duration-1000'>
+  <Container>
+    <nav class='flex justify-between items-center'>
+      <a href='/' class='dark:text-slate-300'>
+        <img
+          class='w-10 h-10 aspect-square'
+          src='/logos/logo_1.webp'
+          alt='Logo AV'
+          width='500'
+          height='500'
+          loading='lazy'
+        />
+      </a>
+      <ul class='lg:flex gap-8 hidden'>
+        {
+          menu.map(({name, href}) => (
+            <li>
+              <a
+                href={href}
+                class={`block py-2 pl-3 transition pr-4 text-gray-700 dark:text-gray-400 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 sm:p-0`}>
+                {name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <!-- <ButtonCTA /> -->
+    </nav>
+  </Container>
+</header>
