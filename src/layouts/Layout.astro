@@ -3,6 +3,7 @@ import Header from '@components/header/Header.astro';
 import Footer from '@components/footer/Footer.astro';
 import '@fontsource/kanit';
 import '@fontsource/lato';
+import {siteUrl} from '@db/data';
 
 export interface Props {
   title: string;
@@ -10,9 +11,9 @@ export interface Props {
 
 const {title} = Astro.props;
 const description =
-  'Welcome to my online portfolio. Explore it and discover my experience in frontend development, including projects with HTML, CSS and JavaScript. If you are interested in hiring my services or just want to know more about my experience, feel free to contact me.';
-const url = 'https://website-aragrevo.vercel.app/';
-const image = 'https://website-aragrevo.vercel.app/images/foto.webp';
+  'Bienvenidos a mi sitio. Arquitectos, Ingenieros, Licencias de Construcción, Planos, Remodelaciones, mantenimiento y reparaciones locativas. Damos soluciones prácticas, rápidas e integrales a sus proyectos.';
+const url = siteUrl;
+const image = `${siteUrl}/images/logo_3.webp`;
 ---
 
 <!DOCTYPE html>
@@ -50,7 +51,6 @@ const image = 'https://website-aragrevo.vercel.app/images/foto.webp';
     <Footer />
   </body>
 </html>
-<script src='https://cdn.lordicon.com/ritcuqlt.js'></script>
 <style is:global>
   html {
     scroll-behavior: smooth;

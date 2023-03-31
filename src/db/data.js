@@ -1,3 +1,4 @@
+export const siteUrl = 'https://avarchitectsolutions.vercel.app/';
 export const email = 'hugo_andres_v@hotmail.com';
 export const socialNetworks = [
   {
