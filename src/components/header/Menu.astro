@@ -1,0 +1,17 @@
+---
+import {menu} from '@db/data';
+---
+
+<ul class='flex ml-auto pt-2 sm:pt-0 gap-4 lg:gap-8'>
+  {
+    menu.map(({name, href}) => (
+      <li>
+        <a
+          href={href}
+          class={`block py-2 transition text-00215B rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-00215B/80 sm:p-0`}>
+          {name}
+        </a>
+      </li>
+    ))
+  }
+</ul>

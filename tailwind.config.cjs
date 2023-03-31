@@ -6,6 +6,8 @@ module.exports = {
       colors: {
         OO1ED3: '#001ED3',
         '41444B': '#41444B',
+        D4D7DD: '#D4D7DD',
+        '00215B': '#00215B',
       },
     },
     fontFamily: {

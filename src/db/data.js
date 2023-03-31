@@ -12,3 +12,18 @@ export const socialNetworks = [
     href: 'mailto:hugo_andres_v@hotmail.com',
   },
 ];
+
+export const menu = [
+  {
+    name: 'Inicio',
+    href: '/',
+  },
+  {
+    name: 'Servicios',
+    href: '/#services',
+  },
+  {
+    name: 'Galería',
+    href: '/#gallery',
+  },
+];
