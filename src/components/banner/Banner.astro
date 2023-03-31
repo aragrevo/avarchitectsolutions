@@ -2,27 +2,13 @@
 import Container from '@components/Container.astro';
 ---
 
-<section id='banner' class='bg-[#F6F8FB] overflow-hidden w-full pt-28 pb-12 md:pt-52 md:pb-16'>
+<section id='banner' class='bg-hero-pattern bg-no-repeat bg-cover bg-bottom overflow-hidden w-full'>
   <Container>
-    <div class='grid grid-cols-1 gap-0 md:grid-cols-2'>
-      <div>
-        <h1 class='font-bold leading-snug text-3xl mb-4 md:mb-5 md:text-5xl md:max-w-lg text-black'>
-          Andrés Vasquez Architect Solutions
-        </h1>
-        <p class='text-base text-text_secondary mb-5 md:max-w-md md:text-xl md:mb-8'>
-          Un mundo de soluciones prácticas y rápidas
-        </p>
-      </div>
-      <div>
-        <img
-          class='flex relative top-0 max-w-full md:-top-10 mix-blend-multiply'
-          width={958}
-          height={765}
-          src='/images/two_men.jpg'
-          alt='two men see builds'
-        />
-        <!-- priority='high' -->
-      </div>
+    <div class='flex flex-col py-36'>
+      <h1 class='font-semibold text-6xl mb-5 text-black max-w-2xl'>
+        Andrés Vásquez <span class='font-normal'>Architect Solutions</span>
+      </h1>
+      <p class='text-bold text-xl'>Un mundo de soluciones prácticas y rápidas</p>
     </div>
   </Container>
 </section>

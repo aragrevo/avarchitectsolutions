@@ -9,6 +9,9 @@ module.exports = {
         D4D7DD: '#D4D7DD',
         '00215B': '#00215B',
       },
+      backgroundImage: {
+        'hero-pattern': "url('/images/office-building.webp')",
+      },
     },
     fontFamily: {
       Lato: ['Lato', 'sans-serif', 'system-ui'],
