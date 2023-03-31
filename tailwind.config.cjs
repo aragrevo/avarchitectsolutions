@@ -8,6 +8,8 @@ module.exports = {
         '41444B': '#41444B',
         D4D7DD: '#D4D7DD',
         '00215B': '#00215B',
+        D2153D: '#D2153D',
+        EBECEE: '#EBECEE',
       },
       backgroundImage: {
         'hero-pattern': "url('/images/office-building.webp')",
