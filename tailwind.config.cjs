@@ -10,6 +10,7 @@ module.exports = {
         '00215B': '#00215B',
         D2153D: '#D2153D',
         EBECEE: '#EBECEE',
+        '16213E': '#16213E',
       },
       backgroundImage: {
         'hero-pattern': "url('/images/office-building.webp')",

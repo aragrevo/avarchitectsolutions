@@ -1,49 +1,24 @@
 ---
 import Container from '@components/Container.astro';
+import About from './About.astro';
 import Expirience from './Expirience.astro';
 import Features from './Features.astro';
-
-// Para AV ARCHITECT SOLUTIONS no existe proyecto pequeño, hasta la intervención más sencilla merece ser tratada con atención, siempre pensando en la satisfacción integral del cliente.
-// Para esto ponemos a su disposición un grupo multidisciplinario de profesionales y técnicos colaboradores idóneos en el área, que se caracterizan por su compromiso, ética y aseguramiento de la calidad, pensando siempre en dar solución rápida e idónea a las necesidades de nuestros clientes en todas las areas de la arquitectura y la construcción en general.
-
-// Para AV ARCHITECT SOLUTIONS sería muy honroso  hacer parte de su equipo de trabajo y colaboradores.
+import Images from './Images.astro';
 ---
 
-<section class='bg-white flex flex-col'>
+<section class='bg-white flex flex-col' id='about-us'>
   <Container>
     <div class='flex mb-16 justify-end relative'>
       <Expirience />
       <Features />
     </div>
-  </Container>
-  <div class='relative'>
-    <Container>
-      <div class='flex flex-wrap flex-col lg:flex-row-reverse'>
-        <div class='flex flex-grow-0 flex-shrink-0 basis-full lg:basis-7/12'>
-          <div class='w-full text-left 2xl:pt-24 lg:pl-14'>
-            <div class='text-center lg:text-left'>
-              <h3 class='text-black text-xl xl:text-4xl 2xl:text-3xl leading-relaxed lg:leading-6 font-bold'>
-                Diseño Arquitectónico
-              </h3>
-              <p
-                class='text-base lg:text-lg text-secondary opacity-60 leading-6 lg:leading-relaxed 2xl:leading-loose py-0 px-5 lg:px-0 mt-4'
-              >
-                Interacción con el cliente para sus necesidades
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class='flex flex-grow-0 flex-shrink-0 basis-full lg:basis-5/12'>
-          <img
-            class='flex relative top-0 max-w-full mix-blend-darken'
-            width={633}
-            height={707}
-            src='/images/two_men.jpg'
-            alt='person in cohete'
-            loading='lazy'
-          />
-        </div>
+    <div class='flex flex-wrap flex-col sm:flex-row overflow-hidden pb-2'>
+      <div class='flex flex-grow-0 flex-shrink-0 basis-full lg:basis-7/12'>
+        <About />
       </div>
-    </Container>
-  </div>
+      <div class='flex h-64 sm:h-auto flex-shrink-0 sm:basis-5/12 bg-white relative'>
+        <Images />
+      </div>
+    </div>
+  </Container>
 </section>

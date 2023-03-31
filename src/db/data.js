@@ -19,6 +19,10 @@ export const menu = [
     href: '/',
   },
   {
+    name: 'Nosotros',
+    href: '/#about-us',
+  },
+  {
     name: 'Servicios',
     href: '/#services',
   },
