@@ -1,3 +1,4 @@
+export const email = 'hugo_andres_v@hotmail.com';
 export const socialNetworks = [
   {
     name: 'Instagram',
@@ -9,7 +10,7 @@ export const socialNetworks = [
   },
   {
     name: 'Email',
-    href: 'mailto:hugo_andres_v@hotmail.com',
+    href: `mailto:${email}`,
   },
 ];
 

@@ -1,0 +1,26 @@
+---
+import {email, socialNetworks} from '@db/data';
+import ButtonShare from '@icons/ButtonShare.astro';
+import Facebook from '@icons/Facebook.astro';
+import Instagram from '@icons/Instagram.astro';
+---
+
+<div>
+  <ul class='flex justify-end gap-4 pb-2'>
+    {
+      socialNetworks
+        .filter(s => s.name !== 'Email')
+        .map(({name, href}) => (
+          <li>
+            <a href={href} target='_blank' class={`block transition  hover:scale-110 text-EBECEE hover:text-OO1ED3`}>
+              {name === 'Instagram' && <Instagram className='w-8 h-8' />}
+              {name === 'Facebook' && <Facebook className='w-8 h-8' />}
+              <span class='sr-only'>{name} page</span>
+            </a>
+          </li>
+        ))
+    }
+    <ButtonShare className='text-EBECEE' />
+  </ul>
+  <a class='text-sm font-normal text-EBECEE underline underline-offset-4' href={`mailto:${email}`}>{email}</a>
+</div>

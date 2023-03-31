@@ -1,0 +1,32 @@
+---
+import Container from '@components/Container.astro';
+import Form from './Form.astro';
+import ImageBg from './ImageBg.astro';
+import SocialNetwork from './SocialNetwork.astro';
+---
+
+<footer class='bg-black relative overflow-hidden'>
+  <ImageBg />
+  <Container>
+    <div class='grid grid-cols-12 gap-8 text-white py-20'>
+      <section class='col-span-10 sm:col-span-6 col-start-2 sm:col-start-2'>
+        <h3 class='font-semibold text-2xl sm:text-3xl tracking-wide leading-tight'>Contrata los mejores</h3>
+        <Form />
+      </section>
+      <section
+        class='col-span-10 col-start-2 sm:col-span-3 sm:col-start-9 flex items-end justify-between sm:justify-end sm:flex-col gap-4'
+      >
+        <img
+          class='w-24 h-24 aspect-square'
+          src='/logos/logo_1.webp'
+          alt='Logo AV'
+          width='500'
+          height='500'
+          loading='lazy'
+          decoding='async'
+        />
+        <SocialNetwork />
+      </section>
+    </div>
+  </Container>
+</footer>
