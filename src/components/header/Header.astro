@@ -25,3 +25,22 @@ import TopBar from './TopBar.astro';
     </div>
   </Container>
 </header>
+<script type='module'>
+  const buttons = document.querySelectorAll(`[data-confetti-button]`);
+  buttons.forEach(button => {
+    button.addEventListener('click', e => {
+      e.stopPropagation();
+      const data = {
+        title: 'AV Architect Solutions',
+        text: 'Arquitectos, Ingenieros, Licencias de Construcción, Planos, Remodelaciones, mantenimiento y reparaciones locativas. Damos soluciones prácticas, rápidas e integrales a sus proyectos.',
+        url: 'https://avarchitectsolutions.vercel.app/',
+      };
+      if (navigator && navigator.canShare && navigator.canShare(data)) {
+        navigator.share(data);
+      } else {
+        console.warn('Cann´t share ' + navigator);
+        alert('Cann´t share ' + navigator.canShare);
+      }
+    });
+  });
+</script>

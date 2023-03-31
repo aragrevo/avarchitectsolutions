@@ -7,22 +7,27 @@ const SERVICES_DATA = [
   {
     image: 'asesoria',
     title: 'Asesoría en Inversión para compra de Bienes',
-    text: 'Usos del suelo, edificabilidad, etc',
+    text: 'Usos del suelo, edificabilidad, etc.',
+    description: 'Antes de comprar cerciorarse que el uso del suelo sea el adecuado para sus necesidades.',
   },
   {
     image: 'planos',
-    title: 'Planos y estudios constructivos',
-    text: 'Juegos de planos y estudios interdisciplinarios para el buen desarrollo de las obras',
+    title: 'Planos y diseños constructivos',
+    text: 'Juegos de planos y estudios interdisciplinarios para el buen desarrollo de las obras.',
+    description: 'Esto previene gastos y reprocesos innecesarios de las mismas.',
   },
   {
     image: 'renovacion',
-    title: 'Actualización y renovación de inmuebles',
+    title: 'Construcción, actualización y renovación de inmuebles',
     text: 'Adecuaciones, remodelaciones, reforzamientos estructurales.',
+    description: 'No permita que sus inmuebles se desvaloricen, manteniendolos siempre a la vanguardia.',
   },
   {
     image: 'permisos',
-    title: 'Gestión de permiso de las instituciones reguladoras',
-    text: 'Curaduría, servicios públicos, habitad',
+    title: 'Gestión de permisos ante las instituciones reguladoras',
+    text: 'Curaduría, servicios públicos, habitad, notariado y registro.',
+    description:
+      'Licencias de construcción, acometidas de servicios, declaraciones y reconocimientos de construcción, etc.',
   },
 ];
 ---
@@ -31,7 +36,11 @@ const SERVICES_DATA = [
   <Container>
     <BlockTitle slogan='Servicios' title='Conoce como podemos ayudarte' />
     <div class='flex flex-col sm:flex-row h-[40rem] sm:h-80 gap-4 mt-12'>
-      {SERVICES_DATA.map(({title, text, image}) => <ServiceCard title={title} text={text} image={image} />)}
+      {
+        SERVICES_DATA.map(({title, text, image, description}) => (
+          <ServiceCard title={title} text={text} image={image} description={description} />
+        ))
+      }
     </div>
   </Container>
 </section>
