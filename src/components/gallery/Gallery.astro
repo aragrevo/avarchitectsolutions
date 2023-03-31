@@ -1,39 +1,47 @@
 ---
 import BlockTitle from '@components/BlockTitle.astro';
+import Container from '@components/Container.astro';
 import GalleryCard from './GalleryCard.astro';
 
 const GALLERY_DATA = [
   {
-    image: '/images/Imagen1.webp',
+    image: '/images/20.jpg',
     title: 'Adecuaciones',
   },
   {
-    image: '/images/Imagen2.webp',
+    image: '/images/8.jpg',
     title: 'Remodelaciones',
   },
   {
-    image: '/images/Imagen3.webp',
+    image: '/images/11.jpg',
     title: 'Reforzamientos estructurales',
   },
   {
-    image: '/images/Imagen4.webp',
+    image: '/images/13.jpg',
     title: 'Planos',
   },
   {
-    image: '/images/Imagen5.webp',
+    image: '/images/14.jpg',
     title: 'Accesos',
     span: 2,
   },
 ];
 ---
 
-<section id='gallery' class='pt-20 2xl:pt-28 pb-20 2xl:pb-24 bg-[#F8FAFC]'>
-  <div class='max-w-5xl mx-auto px-4'>
+<section id='gallery' class='py-20 bg-[#F8FAFC]'>
+  <Container>
     <BlockTitle slogan='Galería' title='Nuestro trabajo' />
-    <div
-      class='flex overflow-auto snap-mandatory snap-x gap-3 p-2.5 scroll-p-2.5 md:overflow-hidden md:grid md:grid-cols-3 slides'
-    >
+    <div class='gap-3 mt-12 grid grid-cols-3 grid-rows-2 grid-flow-dense'>
       {GALLERY_DATA.map(({image, title, span}) => <GalleryCard key={image} image={image} title={title} span={span} />)}
     </div>
-  </div>
+  </Container>
 </section>
+<img
+  class='w-full h-auto max-h-48 sm:max-h-80 aspect-[640/427] object-cover object-bottom'
+  width='640'
+  height='427'
+  src='/images/plane.jpg'
+  alt=''
+  loading='lazy'
+  decoding='async'
+/>

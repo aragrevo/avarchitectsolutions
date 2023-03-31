@@ -2,15 +2,10 @@
 const {title, image, span} = Astro.props;
 ---
 
-<article
-  class={`${
-    span ? 'row-span-3 row-start-1' : 'row-span-1'
-  } rounded-md md:relative overflow-hidden md:shadow shadow-[#F3F4F5] grid-flow-row-dense mb-1.5 break-inside-auto snap-start snap-always shrink-0 grow-0 basis-11/12 `}
->
-  <div class='overflow-hidden'>
-    <!-- <Image class='block w-full' width={320} height={707} src={image} alt={title} /> -->
-  </div>
-  <div class='bg-white px-5 pt-4 pb-2.5 md:absolute md:bottom-0 md:w-full md:bg-opacity-40 md:py-0.5'>
-    <h3 class='text-text_secondary font-semibold text-base tracking-wider'>{title}</h3>
-  </div>
-</article>
+<img
+  class='w-full select-none object-cover first:row-span-2 first:aspect-[1/2.04] aspect-square transition-transform duration-300 active:scale-150'
+  src={image}
+  alt={title}
+  decoding='async'
+  loading='lazy'
+/>
