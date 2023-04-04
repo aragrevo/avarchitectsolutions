@@ -4,7 +4,7 @@ import {email, siteUrl} from '@db/data';
 
 <form action={`https://formsubmit.co/${email}`} method='POST' class='appearance-none w-full flex flex-col py-4'>
   <input type='hidden' name='_captcha' value='false' />
-  <input type='hidden' name='_next' value={siteUrl} />
+  <!-- <input type='hidden' name='_next' value={siteUrl} /> -->
   <input type='text' name='_honey' style='display:none' />
   <input type='hidden' name='_template' value='basic' />
   <div class='flex gap-2 mb-4'>
@@ -44,7 +44,7 @@ import {email, siteUrl} from '@db/data';
   <div class='mt-4'>
     <button
       type='submit'
-      class='inline-block px-10 sm:px-8 pt-2.5 pb-2 rounded-lg bg-00215B scale-100 font-medium text-base shadow transition duration-150 ease-in-out active:scale-95 focus:outline-none focus:ring-0'
+      class='inline-block px-10 sm:px-8 pt-2.5 pb-2 rounded-lg bg-00215B hover:bg-00215B/90 scale-100 font-medium text-base shadow transition duration-150 ease-in-out active:scale-95 focus:outline-none focus:ring-0'
       >Enviar</button
     >
   </div>

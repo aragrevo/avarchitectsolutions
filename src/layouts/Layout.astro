@@ -11,16 +11,17 @@ export interface Props {
 
 const {title} = Astro.props;
 const description =
-  'Bienvenidos a mi sitio. Arquitectos, Ingenieros, Licencias de Construcción, Planos, Remodelaciones, mantenimiento y reparaciones locativas. Damos soluciones prácticas, rápidas e integrales a sus proyectos.';
+  'Arquitectos, Ingenieros, Licencias de Construcción, Planos, Remodelaciones, mantenimiento y reparaciones locativas. Damos soluciones prácticas, rápidas e integrales a sus proyectos.';
 const url = siteUrl;
 const image = `${siteUrl}/logos/logo_3.webp`;
 ---
 
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='es'>
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width' />
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
     <link rel='icon' type='image/ico' href='/favicon.ico' />
     <link href={url} rel='canonical' />
     <meta name='generator' content={Astro.generator} />
