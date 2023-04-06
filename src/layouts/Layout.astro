@@ -9,11 +9,14 @@ export interface Props {
   title: string;
 }
 
-const {title} = Astro.props;
+const {title: externalTitle} = Astro.props;
+const title = `${externalTitle} | Arquitectura y Diseño`;
 const description =
-  'Arquitectos, Ingenieros, Licencias de Construcción, Planos, Remodelaciones, mantenimiento y reparaciones locativas. Damos soluciones prácticas, rápidas e integrales a sus proyectos.';
+  'Arquitectos, Ingenieros, Licencias de Construcción, Planos, Remodelaciones, Reparaciones locativas. Soluciones prácticas, rápidas e integrales.';
 const url = siteUrl;
 const image = `${siteUrl}/logos/logo_3.webp`;
+const keywords =
+  'Licencias de Construcción, Planos, Remodelaciones, Arquitectura y Diseño, Arquitecto, Despachos de Arquitectura, Proyectos arquitectónicos, Arquitecto para Renovaciones, Arquitecto para Oficinas, Servicio de Planos Arquitectónicos, Diseños Constructivos';
 ---
 
 <!DOCTYPE html>
@@ -25,6 +28,7 @@ const image = `${siteUrl}/logos/logo_3.webp`;
     <link rel='icon' type='image/ico' href='/favicon.ico' />
     <link href={url} rel='canonical' />
     <meta name='generator' content={Astro.generator} />
+    <meta name='keywords' content={keywords} />
 
     <!-- Primary Meta Tags -->
     <title>{title}</title>
@@ -51,6 +55,17 @@ const image = `${siteUrl}/logos/logo_3.webp`;
     <Footer />
   </body>
 </html>
+<!-- Google tag (gtag.js) -->
+<script is:inline async src='https://www.googletagmanager.com/gtag/js?id=G-5DZW2RRZ10'></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'G-5DZW2RRZ10');
+</script>
 <style is:global>
   html {
     scroll-behavior: smooth;
