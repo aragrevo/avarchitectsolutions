@@ -48,6 +48,16 @@ const keywords =
     <meta property='twitter:title' content={title} />
     <meta property='twitter:description' content={description} />
     <meta property='twitter:image' content={image} />
+    <script type='text/partytown' src='https://www.googletagmanager.com/gtag/js?id=G-5DZW2RRZ10'></script>
+    <script type='text/partytown'>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-5DZW2RRZ10');
+    </script>
   </head>
   <body class='min-h-screen overflow-x-hidden transition-colors duration-1000'>
     <Header />
@@ -56,16 +66,7 @@ const keywords =
   </body>
 </html>
 <!-- Google tag (gtag.js) -->
-<script is:inline async src='https://www.googletagmanager.com/gtag/js?id=G-5DZW2RRZ10'></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
 
-  gtag('config', 'G-5DZW2RRZ10');
-</script>
 <style is:global>
   html {
     scroll-behavior: smooth;
