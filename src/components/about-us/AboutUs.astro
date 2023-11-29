@@ -1,0 +1,43 @@
+---
+import BlockTitle from '@components/BlockTitle.astro';
+import Container from '@components/Container.astro';
+import Photo from './Photo.astro';
+---
+
+<section id='aboutUs' class='pt-20 pb-0 bg-white'>
+  <Container>
+    <BlockTitle slogan='Nosotros' title='' />
+    <div class='mt-12'>
+      <p class='text-41444B font-normal leading-relaxed'>
+        Somos una empresa de la capital de Colombia, conformada por profesionales de diferentes áreas del conocimiento,
+        encabezada por el Arquitecto y Gerente General Hugo Andrés Vásquez, profesional egresado de la Universidad
+        Católica de Colombia, debidamente licenciado por el Consejo Profesional Nacional de Arquitectura y sus
+        Profesiones Auxiliares, con matrícula profesional No. A204502010 y más de 20 años de experiencia en consultoría,
+        diseño, construcción, remodelación y gestión de licencias de construcción.
+      </p>
+    </div>
+    <div class='flex flex-wrap flex-col sm:flex-row overflow-hidden mt-7 items-center'>
+      <div class='flex flex-shrink-0 sm:basis-1/3 relative aspect-[4/3]'>
+        <Photo />
+      </div>
+      <div class='flex flex-grow-0 flex-shrink-0 basis-full sm:basis-2/3 p-4'>
+        <p class='text-41444B font-normal leading-relaxed max-w-prose mx-auto'>
+          Bajo su liderazgo <span class='text-00215B font-semibold'>AV Arquitect Solutions</span> ha llevado a cabo más de
+          300 proyectos de diferentes tipos, desde viviendas unifamiliares hasta multifamiliares, además de los dotacionales
+          educativos, para la salud, comerciales o industriales y que han finalizado de manera exitosa, convirtiendose en
+          nuestro mayor logro, la confianza y satisfacción de nuestros clientes. Nuestro equipo multidisciplinario se caracteriza
+          por el profesionalismo, el cumplimiento de las metas asignadas y altos estándares de calidad, poniendo la necesidad
+          del cliente siempre en el primer lugar.
+        </p>
+      </div>
+    </div>
+    <div class='mt-4 mx-auto bg-white shadow border-t-2 border-OO1ED3 p-6 w-auto max-w-prose'>
+      <h6 class='text-00215B font-medium text-lg'>MISIÓN</h6>
+      <p class='text-41444B text-base max-w-prose'>
+        Nuestra misión es desarrollar proyectos integrales en arquitectura, diseño y construcción, planteando soluciones
+        prácticas, viables, novedosas y memorables, que prioricen los factores humanos, ambientales, económicos y
+        estéticos y que, sobre todo, satisfagan completamente las necesidades de nuestros clientes.
+      </p>
+    </div>
+  </Container>
+</section>

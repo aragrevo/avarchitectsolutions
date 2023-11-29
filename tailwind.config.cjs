@@ -18,7 +18,7 @@ module.exports = {
     },
     fontFamily: {
       Lato: ['Lato', 'sans-serif', 'system-ui'],
-      Kanit: ['Kanit', 'sans-serif', 'system-ui'],
+      // Kanit: ['Kanit', 'sans-serif', 'system-ui'],
     },
   },
   plugins: [],
