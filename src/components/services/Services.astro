@@ -8,34 +8,35 @@ const SERVICES_DATA = [
     image: 'asesoria',
     title: 'Asesoramos a la hora de invertir en la compra bienes raíces.',
     text: 'Antes de comprar cerciórese de que el uso del suelo sea el adecuado para sus necesidades.',
-    description: 'Usos permitidos del suelo, Factores de edificabilidad, Planes de desarrollo futuros.',
+    description: 'Usos permitidos del suelo; Factores de edificabilidad; Planes de desarrollo futuros.',
   },
   {
     image: 'planos',
-    title: 'Planos y diseños constructivos',
-    text: 'Realizamos planos y diseños constructivos para prevenir gastos y reprocesos innecesarios.',
-    description: 'Juegos de planos, Estudios interdisciplinarios para el buen desarrollo de las obras.',
+    title: 'Realisamos planos y diseños constructivos',
+    text: 'Prevenga gastos y reprocesos innecesarios.',
+    description:
+      'Juegos de planos de obra; Estudios interdisciplinarios para el buen desarrollo de las obras; Estudios de suelos; Levantamientos topográficos; Levantamientos arquitectónicos; Levantamientos estructurales',
   },
   {
     image: 'renovacion',
     title: 'Construcción, actualización y renovación de inmuebles',
     text: 'No permita que sus inmuebles se desvaloricen y/o devalúen.',
     description:
-      'Mantenimiento y modernización de infraestructuras, Adecuaciones, remodelaciones y reforzamientos estructurales.',
+      'Diseño y construcción de edificaciones; Mantenimiento y modernización de infraestructuras: impermeabilización, pintura, redes hidráulicas, sanitarias, eléctricas y otras; Adecuaciones, remodelaciones y reforzamientos estructurales; Actualización y modernización de fachadas',
   },
   {
     image: 'permisos',
     title: 'Gestión de permisos y trámites ante las entidades de vigilancia, control y regulación.',
-    text: 'Curadurías, empresas de servicios públicos, secretarías de hábitat, Superintendencia de notariado y registro, Catastro, etc.',
+    text: 'Cumplir con las normas establecidas para evitar infracciones urbanísticas.',
     description:
-      'Licencias de construcción, acometidas de servicios, declaraciones y reconocimientos de construcción, etc.',
+      'Curadurías, oficinas de Planeación, empresas de servicios públicos, secretarías de hábitat, Superintendencia de notariado y registro, oficinas de Catastro, etc; Licencias de construcción, acometidas de servicios, declaraciones y reconocimientos y legalización de construcciones, etc.; Subdivisiones prediales y propiedad horizontal, entre otros',
   },
 ];
 ---
 
 <section id='services' class='py-20 bg-white'>
   <Container>
-    <BlockTitle slogan='Servicios' title='Conoce como podemos ayudarte' />
+    <BlockTitle slogan='Servicios' title='Estamos listos para ayudarte' />
     <div class='flex flex-col sm:flex-row h-[40rem] sm:h-80 gap-4 mt-12 custom-animation'>
       {
         SERVICES_DATA.map(({title, text, image, description}) => (

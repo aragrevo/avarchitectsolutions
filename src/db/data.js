@@ -1,5 +1,5 @@
 export const siteUrl = 'https://www.avarchitectsolutions.com/';
-export const email = 'hugo_andres_v@hotmail.com';
+export const email = 'av.architectsolution@gmail.com';
 export const socialNetworks = [
   {
     name: 'Instagram',
@@ -7,7 +7,7 @@ export const socialNetworks = [
   },
   {
     name: 'Facebook',
-    href: 'https://www.instagram.com/av.architectsolutions/',
+    href: 'https://www.facebook.com/people/avarchitectsolutions/100091309550642/',
   },
   {
     name: 'Email',

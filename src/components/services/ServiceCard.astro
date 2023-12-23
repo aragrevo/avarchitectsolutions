@@ -1,5 +1,6 @@
 ---
 const {title, className, text, image, description} = Astro.props;
+const list = description.split(';');
 ---
 
 <article
@@ -10,7 +11,22 @@ const {title, className, text, image, description} = Astro.props;
     class='absolute p-8 inset-0 transition-all duration-300 group-even:bg-D2153D/50 group-odd:bg-00215B/50 group-hover:bg-black/50'
   >
     <h2 class='font-medium text-white text-xl'>{title}</h2>
-    <p class='invisible group-hover:visible delay-300 text-EBECEE font-medium text-base max-w-prose'>{text}</p>
-    <p class='invisible group-hover:visible delay-300 text-EBECEE text-sm max-w-prose'>{description}</p>
+    <p class='invisible group-hover:visible delay-300 text-EBECEE font-medium text-base max-w-prose italic'>{text}</p>
+    {
+      list.map(item => (
+        <li class='flex items-start gap-2 invisible group-hover:visible delay-300 text-EBECEE text-sm max-w-prose'>
+          <svg
+            class='w-3.5 h-3.5 mt-1
+             text-green-500 dark:text-green-400 flex-shrink-0'
+            aria-hidden='true'
+            xmlns='http://www.w3.org/2000/svg'
+            fill='currentColor'
+            viewBox='0 0 20 20'>
+            <path d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z' />
+          </svg>
+          {item}
+        </li>
+      ))
+    }
   </div>
 </article>
