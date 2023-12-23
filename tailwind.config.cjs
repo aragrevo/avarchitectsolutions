@@ -12,6 +12,10 @@ module.exports = {
         BC701C: '#BC701C',
         EBECEE: '#EBECEE',
         '16213E': '#16213E',
+        C0C0BE: '#C0C0BE',
+        FFD200: '#FFD200',
+        DAC29E: '#DAC29E',
+        '7B87B1': '#7B87B1',
       },
       backgroundImage: {
         'hero-pattern': "url('/images/office-building.webp')",
