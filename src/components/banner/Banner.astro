@@ -4,7 +4,7 @@ import Container from '@components/Container.astro';
 
 <section
   id='banner'
-  class='banner overflow-hidden w-full relative min-h-[350px] bg-BC701C border-4 border-black box-border'
+  class='banner overflow-hidden w-full relative md:min-h-[350px] bg-BC701C border-l-0 lg:border-l-4 border-4 border-black box-border'
 >
   <Container className='relative h-full'>
     <div class='absolute -top-1 bottom-0 left-0 right-0'>
@@ -17,16 +17,21 @@ import Container from '@components/Container.astro';
         loading='lazy'
       />
     </div>
-    <div class='absolute bottom-0 left-20 right-1/3 pl-3 pr-8'>
+    <div
+      class='absolute bg-[#7B87B1] bg-opacity-10 bottom-8 sm:bottom-0 xl:bottom-1 sm:left-16 lg:left-20 sm:right-1/3 pl-3 sm:pr-8'
+    >
       <blockquote class='text-semibold text-base leading-5 text-white max-w-prose italic'>
         “El arte no está hecho para nadie, y es, al mismo tiempo, para todos.”
-        <span class='block'>Piet Mondrian.</span>
+        <span class='sm:block'>Piet Mondrian.</span>
       </blockquote>
     </div>
   </Container>
 </section>
 <style>
   .banner {
-    aspect-ratio: 3/1;
+    aspect-ratio: 16/9;
+    @media screen and (min-width: 640px) {
+      aspect-ratio: 3/1;
+    }
   }
 </style>

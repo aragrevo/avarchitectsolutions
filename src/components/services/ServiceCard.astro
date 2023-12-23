@@ -5,7 +5,7 @@ const list = description.split(';');
 
 <article
   style={`background-image: url('/images/${image}.webp')`}
-  class={`relative overflow-hidden flex-auto shrink-0 sm:flex-1 text-left transition-all duration-500 rounded sm:rounded-lg hover:flex-[3] bg-no-repeat bg-center group`}
+  class={`relative overflow-hidden flex-auto shrink-0 sm:flex-1 text-left transition-all duration-500 rounded sm:rounded-lg hover:flex-[4] lg:hover:flex-[3] bg-no-repeat bg-center group`}
 >
   <div
     class='absolute p-8 inset-0 transition-all duration-300 group-even:bg-D2153D/50 group-odd:bg-00215B/50 group-hover:bg-black/50'
@@ -14,7 +14,7 @@ const list = description.split(';');
     <p class='invisible group-hover:visible delay-300 text-EBECEE font-medium text-base max-w-prose italic'>{text}</p>
     {
       list.map(item => (
-        <li class='flex items-start gap-2 invisible group-hover:visible delay-300 text-EBECEE text-sm max-w-prose'>
+        <li class='flex items-start gap-2 invisible group-hover:visible delay-300 text-EBECEE text-base max-w-prose'>
           <svg
             class='w-3.5 h-3.5 mt-1
              text-green-500 dark:text-green-400 flex-shrink-0'

@@ -1,5 +1,5 @@
 export const siteUrl = 'https://www.avarchitectsolutions.com/';
-export const email = 'av.architectsolution@gmail.com';
+export const email = 'av.architectsolutions@gmail.com';
 export const socialNetworks = [
   {
     name: 'Instagram',
