@@ -12,11 +12,11 @@ export interface Props {
 const {title: externalTitle} = Astro.props;
 const title = `${externalTitle} | Arquitectura y Diseño`;
 const description =
-  'Arquitectos, Ingenieros, Licencias de Construcción, Planos, Remodelaciones, Reparaciones locativas. Soluciones prácticas, rápidas e integrales.';
+  '¡Transformamos espacios, hacemos sueños realidad! Somos expertos en remodelaciones y diseño de interiores. Creamos ambientes funcionales, atractivos y adaptados a tus necesidades. Desde pequeñas renovaciones hasta proyectos a gran escala, estamos aquí para convertir tu espacio en algo único y lleno de estilo. ¡Descubre cómo podemos hacer realidad tu proyecto de remodelación! #Remodelaciones #DiseñoDeInteriores';
 const url = siteUrl;
 const image = `${siteUrl}/logos/logo_3.webp`;
 const keywords =
-  'Licencias de Construcción, Planos, Remodelaciones, Arquitectura y Diseño, Arquitecto, Despachos de Arquitectura, Proyectos arquitectónicos, Arquitecto para Renovaciones, Arquitecto para Oficinas, Servicio de Planos Arquitectónicos, Diseños Constructivos';
+  'Licencias, Planos, Remodelaciones, Remodelaciones, Arquitectura, Diseño, Interiores, Renovaciones, Materiales, Construcción, Obra';
 ---
 
 <!DOCTYPE html>
@@ -36,18 +36,21 @@ const keywords =
     <meta name='description' content={description} />
 
     <!-- Open Graph / Facebook -->
-    <meta property='og:type' content='website' />
-    <meta property='og:url' content={url} />
     <meta property='og:title' content={title} />
     <meta property='og:description' content={description} />
     <meta property='og:image' content={image} />
+    <!-- <meta property="og:image:width" content="2500"/> -->
+    <!-- <meta property="og:image:height" content="3333"/> -->
+    <meta property='og:url' content={url} />
+    <meta property="og:site_name" content={title}/>
+    <meta property='og:type' content='website' />
 
     <!-- Twitter -->
     <meta property='twitter:card' content='summary_large_image' />
-    <meta property='twitter:url' content={url} />
     <meta property='twitter:title' content={title} />
     <meta property='twitter:description' content={description} />
     <meta property='twitter:image' content={image} />
+    <meta property='twitter:url' content={url} />
     <script type='text/partytown' src='https://www.googletagmanager.com/gtag/js?id=G-5DZW2RRZ10'></script>
     <script type='text/partytown'>
       window.dataLayer = window.dataLayer || [];

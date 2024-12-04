@@ -1,0 +1,6 @@
+
+User-agent: *
+Allow: /
+Disallow: /cgi-bin/
+Disallow: /~partytown/
+Sitemap: https://www.avarchitectsolutions.com/sitemap.xml
